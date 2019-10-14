@@ -72,14 +72,14 @@ header {
 /* -------------------------- start prallax --------------------------  */
 .keyart_layer{
   background-position: center;
-  background-size: auto 1200px;
+  background-size: cover; /* first value: width of the image, second value: height */
   background-repeat: repeat-x;
   width: 100%;
   position: absolute;
 }
 
 .keyart, .keyart_layer{
-  height: 700px;
+  height: 100vh;
 }
 
 #keyart-1{
@@ -100,6 +100,10 @@ header {
 
 #keyart-5{
   background-image: url('img/hero-05.png')
+}
+
+#keyart-6{
+  background-image: url('img/hero-06.png')
 }
 /* -------------------------- end parallax --------------------------  */
 
