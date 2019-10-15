@@ -5,10 +5,12 @@
   --text-light: #ABABAB; /* light grey */
 }
 
-body, header, h1, h2, h3, h4, p, div, section, ul, li, img {
+body, header, nav, h1, h2, h3, h4, p, div, section, ul, li, img, main, footer {
   margin: 0;
   padding: 0;
 }
+
+
 
 body {
   font-family: nunito, arial;
@@ -70,16 +72,30 @@ header {
 /* -------------------------- end header --------------------------  */
 
 /* -------------------------- start prallax --------------------------  */
+body{
+  position: relative;
+}
+
 .keyart_layer{
-  background-position: center;
+  background-position: top;
   background-size: cover; /* first value: width of the image, second value: height */
-  background-repeat: repeat-x;
+  /* background-repeat: repeat-x; */
   width: 100%;
   position: absolute;
 }
 
-.keyart, .keyart_layer{
-  height: 100vh;
+#parallax{
+  display: block;
+}
+
+.keyart{
+  position: relative;
+  z-index: 10;
+  height: 90vh;
+}
+
+.keyart_layer{
+  height: 130vh;
 }
 
 #keyart-1{
@@ -105,6 +121,20 @@ header {
 #keyart-6{
   background-image: url('img/hero-06.png')
 }
+
+.cover{
+  z-index: 99;
+  position: relative;
+  background-color: var(--main);
+  height: 300px;
+  top: -100;
+}
+
+main{
+  background-color: white;
+  position: relative;
+  z-index: 98;
+}
 /* -------------------------- end parallax --------------------------  */
 
 /* -------------------------- start fixed nav --------------------------  */
@@ -114,9 +144,11 @@ nav {
   width: 350px;
   top: 80px;
   right: 0;
+  /* z-index: 60; */
   /* overflow-y: scroll;
   display: block;
   height: 80vh; */
+
 }
 
 nav li a{
@@ -152,18 +184,19 @@ nav li {
 /* ------------------- end fixed nav------------------  */
 
 
-main {
+/* main {
   width: 900px;
   margin: auto;
   margin-bottom: 5em;
-}
+} */
 
 .content {
   width: 600px;
+  margin: auto;
 }
 
 .content h2{
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .content h4{
