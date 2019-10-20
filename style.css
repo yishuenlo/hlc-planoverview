@@ -3,14 +3,13 @@
   --accent: #B5BE00; /* green */
   --text-dark: #000000; /* black */
   --text-light: #ABABAB; /* light grey */
+  --content-width: 800px;
 }
 
 body, header, nav, h1, h2, h3, h4, p, div, section, ul, li, img, main, footer {
   margin: 0;
   padding: 0;
 }
-
-
 
 body {
   font-family: nunito, arial;
@@ -90,12 +89,12 @@ body{
 
 .keyart{
   position: relative;
-  z-index: 10;
+  z-index: 99;
   height: 90vh;
 }
 
 .keyart_layer{
-  height: 130vh;
+  height: 120vh;
 }
 
 #keyart-1{
@@ -130,25 +129,46 @@ body{
   top: -100;
 }
 
-main{
-  background-color: white;
+.impact-statement{
   position: relative;
-  z-index: 98;
+  z-index: 99;
+  height: 400px;
+  background-color: var(--main);
+  line-height: 2.5em;
 }
+
+.is-container{
+  padding-top: 6em;
+  color: #fff;
+  width: var(--content-width);
+  margin: auto;
+}
+
+.nav-gap{
+  position: relative;
+  background-color: #fff;
+  height: 100px;
+  z-index: 99;
+}
+
+
 /* -------------------------- end parallax --------------------------  */
+
+.content-container{
+  margin-top: 5em;
+}
 
 /* -------------------------- start fixed nav --------------------------  */
 nav {
-  position: fixed;
+  position: relative;
   float: right;
   width: 350px;
-  top: 80px;
+  top: 4em;
   right: 0;
-  /* z-index: 60; */
+  z-index: 60;
   /* overflow-y: scroll;
   display: block;
   height: 80vh; */
-
 }
 
 nav li a{
@@ -178,24 +198,32 @@ nav li {
   text-transform: uppercase;
   font-size: 0.75em;
   padding-bottom: 1.25em;
-  margin-top: 4em;
+}
+
+.sticky{
+  position: fixed;
+  top: 4em;
 }
 
 /* ------------------- end fixed nav------------------  */
 
 
-/* main {
+main {
+  background-color: white;
+  position: relative;
   width: 900px;
   margin: auto;
   margin-bottom: 5em;
-} */
+  /* padding-top: 4em; */
+}
 
 .content {
-  width: 600px;
+  width: var(--content-width);
   margin: auto;
 }
 
 .content h2{
+  font-size: 2em;
   padding-top: 2em;
 }
 

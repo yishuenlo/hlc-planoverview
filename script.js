@@ -21,3 +21,24 @@ function castParallax() {
 }
 
 document.body.onload = castParallax();
+
+// when the use scrolls the page, execute stickyNav
+window.onscroll = function(){ stickyNav();}
+
+const NAVBAR = document.querySelector("nav");
+const MAIN_CONTENT = document.querySelector(".content-container");
+
+
+
+function stickyNav(){
+	// The offsetTop property returns the top position (in pixels) relative to the top of the offsetParent element.
+	var sticky = MAIN_CONTENT.offsetTop;
+
+	if(window.pageYOffset >= sticky){
+		NAVBAR.classList.add("sticky");
+	} else {
+		NAVBAR.classList.remove("sticky");
+	}
+}
+
+console.log(window.pageYOffset);
