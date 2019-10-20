@@ -1,7 +1,7 @@
 :root{
   --main: #1F355E; /* navy blue */
   --accent: #B5BE00; /* green */
-  --text-dark: #000000; /* black */
+  --text-dark: #666; /* black */
   --text-light: #ABABAB; /* light grey */
   --content-width: 800px;
 }
@@ -36,21 +36,43 @@ ul li{
 padding-left: 10px;
 }
 
+button{
+  padding: 5px 20px;
+  border-radius: 2px;
+  border: 2px solid var(--accent);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+button:hover{
+  color: var(--main);
+  background-color: var(--accent);
+  transition: 400ms ease;
+}
+
 
 /* -------------------------- start header --------------------------  */
 header {
+  position: fixed;
   height: 70px;
   background-color: var(--main);
   line-height: 70px;
   border-bottom: 6px solid var(--accent);
+  z-index: 100;
+  width: 100%;
+}
+
+.header-container{
+  width: var(--content-width);
+  margin: auto;
 }
 
 .header-nav {
+  width: 80%;
   margin: auto;
-  width: 900px; /* document width */
   display: flex;
   align-items: center;
   flex-direction: row;
+  float: left;
 }
 
 .header-logo {
@@ -68,6 +90,20 @@ header {
   text-align: right;
   float: right;
 }
+
+.header-fullplan{
+  width: 20%;
+  float: right;
+  height: 70px;
+  margin-top: 20px;
+}
+
+.fullplan-btn{
+  color: white;
+  display: flex;
+  float: right;
+}
+
 /* -------------------------- end header --------------------------  */
 
 /* -------------------------- start prallax --------------------------  */
@@ -138,10 +174,17 @@ body{
 }
 
 .is-container{
-  padding-top: 6em;
+  padding-top: 4.5em;
   color: #fff;
   width: var(--content-width);
   margin: auto;
+}
+
+.is-container p{
+  text-transform: uppercase;
+  font-family: Merriweather, serif;
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .nav-gap{
@@ -149,6 +192,10 @@ body{
   background-color: #fff;
   height: 100px;
   z-index: 99;
+}
+
+.other-resources{
+  margin-top: 2em;
 }
 
 
@@ -202,7 +249,7 @@ nav li {
 
 .sticky{
   position: fixed;
-  top: 4em;
+  top: 8em;
 }
 
 /* ------------------- end fixed nav------------------  */
@@ -223,11 +270,23 @@ main {
 }
 
 .content h2{
+  font-family: Merriweather, serif;
+  color: var(--main);
   font-size: 2em;
   padding-top: 2em;
 }
 
+.content h3{
+  color: var(--text-light);
+  font-weight: 300;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-family: Merriweather, serif;
+}
+
 .content h4{
+  color: var(--main);
+  font-size: 1.5em;
   font-weight: 500;
 }
 
@@ -236,15 +295,28 @@ main {
 }
 
 .obj-icons-container {
-  display: flex;
+  position: relative;
+  display: inline-block;
 }
 
 .objective{
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: left;
+  margin-top: 3em;
 }
 
 .obj-icon {
-  width: 150px;
+  width: 300px;
+}
+
+.objective button{
+  margin-top: 1.5em;
+}
+
+.tools{
+  position: relative;
 }
 
 .toosl-img-container {

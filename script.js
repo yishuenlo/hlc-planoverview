@@ -32,7 +32,7 @@ const MAIN_CONTENT = document.querySelector(".content-container");
 
 function stickyNav(){
 	// The offsetTop property returns the top position (in pixels) relative to the top of the offsetParent element.
-	var sticky = MAIN_CONTENT.offsetTop;
+	var sticky = MAIN_CONTENT.offsetTop - 60;
 
 	if(window.pageYOffset >= sticky){
 		NAVBAR.classList.add("sticky");
