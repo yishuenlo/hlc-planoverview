@@ -197,8 +197,6 @@ body{
 .other-resources{
   margin-top: 2em;
 }
-
-
 /* -------------------------- end parallax --------------------------  */
 
 .content-container{
@@ -404,4 +402,15 @@ main {
 footer a:hover {
   text-decoration: underline;
   transition: 400ms ease-in;
+}
+/* -------------------END footer------------------  */
+
+/* ---------------START media query--------------- */
+@media only screen and (max-width: 1350px) {
+  body {
+    color: lightblue; /* help indicate width change */
+  }
+  nav {
+    right: -30rem; /* hide menu to the right */
+  }
 }

@@ -1,3 +1,4 @@
+// ------------START prallax scripts------------
 function castParallax() {
 
 	var opThresh = 350;
@@ -17,18 +18,17 @@ function castParallax() {
 
 		}
 	});
-
 }
 
 document.body.onload = castParallax();
+// ------------END prallax scripts------------
 
+// ------------START sticky menu script------------
 // when the use scrolls the page, execute stickyNav
 window.onscroll = function(){ stickyNav();}
 
 const NAVBAR = document.querySelector("nav");
 const MAIN_CONTENT = document.querySelector(".content-container");
-
-
 
 function stickyNav(){
 	// The offsetTop property returns the top position (in pixels) relative to the top of the offsetParent element.
@@ -40,5 +40,4 @@ function stickyNav(){
 		NAVBAR.classList.remove("sticky");
 	}
 }
-
-console.log(window.pageYOffset);
+// -----------END sticky menu script--------------
