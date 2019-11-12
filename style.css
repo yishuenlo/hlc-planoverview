@@ -62,8 +62,9 @@ header {
 }
 
 .header-container{
-  width: var(--content-width);
-  margin: auto;
+  width: 62%;
+  /* margin: auto; */
+  padding-left: 20%;
 }
 
 .header-nav {
@@ -176,8 +177,9 @@ body{
 .is-container{
   padding-top: 4.5em;
   color: #fff;
-  width: var(--content-width);
-  margin: auto;
+  width: 60%;
+  /* margin: auto; */
+  padding-left: 20%;
 }
 
 .is-container p{
@@ -200,6 +202,8 @@ body{
 /* -------------------------- end parallax --------------------------  */
 
 .content-container{
+  /* width: var(--content-width);
+  margin: auto; */
   margin-top: 5em;
 }
 
@@ -207,7 +211,7 @@ body{
 nav {
   position: relative;
   float: right;
-  width: 350px;
+  width: 25%;
   top: 4em;
   right: 0;
   z-index: 60;
@@ -256,15 +260,15 @@ nav li {
 main {
   background-color: white;
   position: relative;
-  width: 900px;
+  width: 100%;
   margin: auto;
   margin-bottom: 5em;
   /* padding-top: 4em; */
 }
 
 .content {
-  width: var(--content-width);
-  margin: auto;
+  width: 50%;
+  padding: 0 5% 0 20%;
 }
 
 .content h2{
@@ -409,6 +413,24 @@ footer a:hover {
 @media only screen and (max-width: 1350px) {
   body {
     color: lightblue; /* help indicate width change */
+  }
+  .header-container{
+    width: 80%;
+    margin: auto;
+    padding-left: 0;
+  }
+  main{
+    /* width: var(--content-width); */
+  }
+  .content {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+  }
+  .is-container{
+    width: 80%;
+    margin: auto;
+    padding-left: 0;
   }
   nav {
     right: -30rem; /* hide menu to the right */
