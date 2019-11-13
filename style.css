@@ -411,9 +411,6 @@ footer a:hover {
 
 /* ---------------START media query--------------- */
 @media only screen and (max-width: 1350px) {
-  body {
-    color: lightblue; /* help indicate width change */
-  }
   .header-container{
     width: 80%;
     margin: auto;
@@ -433,6 +430,8 @@ footer a:hover {
     padding-left: 0;
   }
   nav {
+    position: fixed;
+    width: 300px;
     right: -30rem; /* hide menu to the right */
   }
 }
