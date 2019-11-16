@@ -41,3 +41,33 @@ function stickyNav(){
 	}
 }
 // -----------END sticky menu script--------------
+
+// ------------START hamburger menu script------------
+(function(){
+
+  //create hamburger object
+  let hamburger = {
+    // select and assign HTML to JS variables
+    navToggle: document.querySelector('.nav-toggle'),
+    nav: document.querySelector('nav'),
+		headerNav: document.querySelector('.header-nav'),
+		headerFullplan: document.querySelector('.header-fullplan'),
+		header:document.querySelector('header'),
+
+    // create doToggle function
+    doToggle: function(e){
+      e.preventDefault();
+      this.navToggle.classList.toggle('expanded');
+      this.nav.classList.toggle('expanded');
+      this.headerNav.classList.toggle('hide');
+      this.headerFullplan.classList.toggle('hide');
+      this.header.classList.toggle('hideBorder');
+    }
+  };
+
+  hamburger.navToggle.addEventListener('click', function(e){
+    hamburger.doToggle(e);
+  });
+
+}());
+// ------------END hamburger menu script------------

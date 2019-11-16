@@ -6,6 +6,9 @@
   --content-width: 800px;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Nunito:300&display=swap');
+
+
 body, header, nav, h1, h2, h3, h4, p, div, section, ul, li, img, main, footer {
   margin: 0;
   padding: 0;
@@ -27,9 +30,10 @@ section {
 }
 
 .current {
-  border-left: 6px solid var(--accent);
-  padding-left: 4px;
-  color: var(--text-dark);
+  /* border-left: 6px solid var(--accent);
+  padding-left: 4px; */
+  color: var(--main);
+  font-weight: 800;
 }
 
 ul li{
@@ -184,7 +188,7 @@ body{
 
 .is-container p{
   text-transform: uppercase;
-  font-family: Merriweather, serif;
+  font-family: 'Bree serif', nunito;
   color: var(--accent);
   font-weight: 800;
 }
@@ -226,7 +230,7 @@ nav li a{
 }
 
 nav li a:hover{
-  color: var(--text-dark);
+  color: var(--main);
   transition: 400ms ease-in;
 }
 
@@ -272,7 +276,7 @@ main {
 }
 
 .content h2{
-  font-family: Merriweather, serif;
+  font-family: 'Bree serif', Merriweather, serif;
   color: var(--main);
   font-size: 2em;
   padding-top: 2em;
@@ -283,7 +287,7 @@ main {
   font-weight: 300;
   font-size: 0.9em;
   text-transform: uppercase;
-  font-family: Merriweather, serif;
+  font-family: 'Bree serif', Merriweather, serif;
 }
 
 .content h4{
@@ -444,12 +448,25 @@ footer a:hover {
     color: white;
     background-color: var(--main);
   }
+
+  nav li a:hover, .current{
+    color: white;
+  }
+
+
   .sticky{
     top: 0;
   }
+
   .header-nav{
     width: 70%;
   }
+
+  nav.expanded {
+    right: 0;
+    z-index: 99;
+  }
+
   .nav-toggle{
     position: relative;
     float: right;
@@ -457,9 +474,7 @@ footer a:hover {
     width: 25px;
     margin-top: 22px;
     margin-left: 20px;
-    /* background-color: red; */
     cursor: pointer;
-    z-index: 200;
   }
 
   /* hamburger icon - 3 horizon lines */
@@ -479,4 +494,31 @@ footer a:hover {
   .nav-toggle .nav-toggle-bar::after { margin-top: 0.5rem; }
   .nav-toggle .nav-toggle-bar::before { margin-top: -0.5rem; }
 
+  /* hamburger icon animation */
+  .nav-toggle.expanded .nav-toggle-bar{
+    background: transparent;
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+  	  background: white;
+  	  margin-top: 0; /* make slanted line center */
+      z-index: 201;
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::after{
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.expanded .nav-toggle-bar::before{
+    transform: rotate(-45deg);
+  }
+
+  .header-nav.hide, .header-fullplan.hide{
+    display: none;
+
+  }
+
+  header.hideBorder{
+    border-bottom: none;
+  }
 }
