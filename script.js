@@ -53,6 +53,7 @@ function stickyNav(){
 		headerNav: document.querySelector('.header-nav'),
 		headerFullplan: document.querySelector('.header-fullplan'),
 		header:document.querySelector('header'),
+		body: document.querySelector('body'),
 
     // create doToggle function
     doToggle: function(e){
@@ -62,6 +63,7 @@ function stickyNav(){
       this.headerNav.classList.toggle('hide');
       this.headerFullplan.classList.toggle('hide');
       this.header.classList.toggle('hideBorder');
+      this.body.classList.toggle('stop-scroll');
     }
   };
 

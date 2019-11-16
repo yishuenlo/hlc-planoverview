@@ -57,6 +57,7 @@ button:hover{
 /* -------------------------- start header --------------------------  */
 header {
   position: fixed;
+  top: 0;
   height: 70px;
   background-color: var(--main);
   line-height: 70px;
@@ -219,9 +220,14 @@ nav {
   top: 4em;
   right: 0;
   z-index: 60;
-  /* overflow-y: scroll;
+  overflow-y: scroll;
   display: block;
-  height: 80vh; */
+  height: 80vh;
+  scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar{
+  display: none;
 }
 
 nav li a{
@@ -255,6 +261,8 @@ nav li {
 
 .sticky{
   position: fixed;
+  max-height: 70vh;
+  overflow-y: scroll;
   top: 8em;
 }
 
@@ -377,14 +385,47 @@ main {
 /* ------------------- end  content------------------  */
 
 /* -------------------start footer------------------  */
+
+footer .nav-label{
+  padding-bottom: 0;
+}
+
 .article-nav{
+  color: var(--main);
   height: 100px;
   background-color: var(--accent);
 }
 
-/* .article-nav .right{
+.footer-nav-container{
+  width: 65%;
+  /* padding-left: 20%; */
+  margin: auto;
+}
+
+.previous{
+  width: 40%;
+  height: 50px;
+  padding-top: 30px;
+  /* background-color: blue; */
+  float: left;
+}
+
+.next{
+  text-align: right;
+  width: 40%;
+  height: 50px;
+  padding-top: 30px;
+  /* background-color: red; */
   float: right;
-} */
+}
+
+.previous, .left{
+  padding-left: 30px;
+}
+
+.next, .right{
+  padding-right: 30px;
+}
 
 .footer-credit {
   color: white;
@@ -394,7 +435,7 @@ main {
 }
 
 .footer-text{
-  width: 900px;
+  width: 65%;
   margin: auto;
   line-height: 40px;
 }
@@ -521,4 +562,13 @@ footer a:hover {
   header.hideBorder{
     border-bottom: none;
   }
+
+  .footer-nav-container, .footer-text{
+    width: 90%;
+  }
+
+.stop-scroll{
+    overflow-y: hidden;
+  }
+
 }
