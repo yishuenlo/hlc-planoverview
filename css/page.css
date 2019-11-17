@@ -1,0 +1,32 @@
+section article h3{
+  color: var(--main);
+  margin-top: 2em;
+}
+
+
+article{
+  margin-bottom: 2em;
+}
+
+.aside{
+  background-color: rgba(181, 190, 0, 0.3);
+  border-left-color: var(--accent);
+  border-left-width: 9px;
+  border-left-style: solid;
+  padding: 0px 45px 40px 26px;
+  margin: 20px -30px 30px -30px;
+}
+
+.aside h2{
+  font-size: 1.5em;
+  color: var(--main);
+}
+
+.aside ul{
+  padding-top: 2em;
+  margin-left: 1em;
+}
+
+.aside li{
+  padding-bottom: 0.5em;
+}

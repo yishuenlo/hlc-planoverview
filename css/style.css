@@ -6,6 +6,10 @@
   --content-width: 800px;
 }
 
+::selection{
+  background-color: rgb(241, 204, 47);
+}
+
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Nunito:300&display=swap');
 
 
@@ -81,6 +85,12 @@ header {
   float: left;
 }
 
+.header-nav a{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .header-logo {
   width: 40px;
   height: 40px;
@@ -140,27 +150,27 @@ body{
 }
 
 #keyart-1{
-  background-image: url('img/hero-01.png')
+  background-image: url('../img/hero-01.png')
 }
 
 #keyart-2{
-  background-image: url('img/hero-02.png')
+  background-image: url('../img/hero-02.png')
 }
 
 #keyart-3{
-  background-image: url('img/hero-03.png')
+  background-image: url('../img/hero-03.png')
 }
 
 #keyart-4{
-  background-image: url('img/hero-04.png')
+  background-image: url('../img/hero-04.png')
 }
 
 #keyart-5{
-  background-image: url('img/hero-05.png')
+  background-image: url('../img/hero-05.png')
 }
 
 #keyart-6{
-  background-image: url('img/hero-06.png')
+  background-image: url('../img/hero-06.png')
 }
 
 .cover{
@@ -283,14 +293,14 @@ main {
   padding: 0 5% 0 20%;
 }
 
-.content h2{
+main h2{
   font-family: 'Bree serif', Merriweather, serif;
   color: var(--main);
   font-size: 2em;
   padding-top: 2em;
 }
 
-.content h3{
+main h3{
   color: var(--text-light);
   font-weight: 300;
   font-size: 0.9em;
@@ -298,14 +308,14 @@ main {
   font-family: 'Bree serif', Merriweather, serif;
 }
 
-.content h4{
+main h4{
   color: var(--main);
   font-size: 1.5em;
   font-weight: 500;
 }
 
-.content p {
-  margin-top: 1em;
+main p {
+  margin-top: 0.4em;
 }
 
 .obj-icons-container {
