@@ -1,11 +1,15 @@
 section article h3{
   color: var(--main);
-  margin-top: 2em;
+  /* margin-top: 2em; */
 }
 
+section article:first-of-type{
+  padding-top: 2em;
+}
 
-article{
-  margin-bottom: 2em;
+section img{
+  width: 100%;
+  padding-top: 1em;
 }
 
 .aside{
@@ -19,14 +23,31 @@ article{
 
 .aside h2{
   font-size: 1.5em;
+  padding: 2em 0 0.5em 0;
   color: var(--main);
 }
 
-.aside ul{
-  padding-top: 2em;
+ul{
+  /* padding-top: 0.5em; */
   margin-left: 1em;
 }
 
-.aside li{
+li{
+  padding-top: 0.25em;
+}
+
+ul li:last-of-type{
+  padding-bottom: 1em;
+}
+
+ul ul{
+  padding-top: 0;
+}
+
+ul ul li{
+  padding-top: 0.25em;
+}
+
+ul ul li:last-child{
   padding-bottom: 0.5em;
 }

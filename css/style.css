@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bree+Serif|Nunito:300&display=swap');
 
 
-body, header, nav, h1, h2, h3, h4, p, div, section, ul, li, img, main, footer {
+body, header, nav, h1, h2, h3, h4, p, div, section,article, ul, li, img, main, footer {
   margin: 0;
   padding: 0;
 }
@@ -30,7 +30,36 @@ a {
 }
 
 section {
-  margin-bottom: 5em;
+  padding-top: 4em;
+}
+
+main h2{
+  font-family: 'Bree serif', Merriweather, serif;
+  color: var(--main);
+  font-size: 2em;
+  /* padding-bottom: 1em; */
+}
+
+main h3{
+  color: var(--text-light);
+  font-weight: 300;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-family: 'Bree serif', Merriweather, serif;
+}
+
+main h4{
+  color: var(--main);
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+main p {
+  margin-top: 0.75em;
+}
+
+main p:last-of-type{
+  padding-bottom: 2em;
 }
 
 .current {
@@ -291,31 +320,6 @@ main {
 .content {
   width: 50%;
   padding: 0 5% 0 20%;
-}
-
-main h2{
-  font-family: 'Bree serif', Merriweather, serif;
-  color: var(--main);
-  font-size: 2em;
-  padding-top: 2em;
-}
-
-main h3{
-  color: var(--text-light);
-  font-weight: 300;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  font-family: 'Bree serif', Merriweather, serif;
-}
-
-main h4{
-  color: var(--main);
-  font-size: 1.5em;
-  font-weight: 500;
-}
-
-main p {
-  margin-top: 0.4em;
 }
 
 .obj-icons-container {
