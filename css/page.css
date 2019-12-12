@@ -27,8 +27,13 @@ section img{
   color: var(--main);
 }
 
+h3{
+  margin-top: 1em;
+}
+
 ul{
   /* padding-top: 0.5em; */
+  margin-top: 0.25em;
   margin-left: 1em;
 }
 
@@ -50,4 +55,17 @@ ul ul li{
 
 ul ul li:last-child{
   padding-bottom: 0.5em;
+}
+
+.vision-statement{
+  border-top: 2px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.vision-statement h2{
+  font-size: 1.5em;
+}
+
+.vision-statement p{
+  font-size: 2em;
 }
